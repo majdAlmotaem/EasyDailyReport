@@ -1,7 +1,7 @@
 import os
 
 from docx import Document
-from datetime import datetime
+from get_week_dates import get_week_dates
 from create_reports_directory import create_reports_directory
 
 def create_word_document(report):
@@ -13,8 +13,7 @@ def create_word_document(report):
     
     # Überschrift und Datum
     doc.add_heading('Ausbildungsnachweis', 0)
-    start_date = datetime.now().strftime("%d.%m.%Y")
-    end_date = datetime.now().strftime("%d.%m.%Y")
+    start_date, end_date = get_week_dates()
     doc.add_paragraph(f'Ausbildungswoche vom: {start_date} bis: {end_date}\n')
     
     # Füge für jeden Tag die Aktivitäten hinzu
