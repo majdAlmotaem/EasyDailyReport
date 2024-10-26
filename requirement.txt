@@ -1,2 +1,2 @@
 python-docx
-requests
+openai
