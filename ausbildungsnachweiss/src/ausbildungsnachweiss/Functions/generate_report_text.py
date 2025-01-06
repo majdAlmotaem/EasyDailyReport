@@ -1,6 +1,6 @@
 from openai import OpenAI
 import time
-from config import API_KEY
+from .config import API_KEY
 
 def generate_report_text(activities):
     client = OpenAI(api_key=API_KEY)

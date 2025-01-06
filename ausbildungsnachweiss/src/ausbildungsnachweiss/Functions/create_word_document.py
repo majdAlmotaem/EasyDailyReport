@@ -2,8 +2,8 @@ import os
 from docx import Document
 from docx.shared import Pt, Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
-from get_week_dates import get_week_dates
-from create_reports_directory import create_reports_directory
+from .get_week_dates import get_week_dates
+from .create_reports_directory import create_reports_directory
 
 def create_word_document(report, personal_informations):
     name, ausbildungsberuf, geschaeftsbereich, ausbildungsjahr = personal_informations
